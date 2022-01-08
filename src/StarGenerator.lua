@@ -8,7 +8,7 @@ Module for generating stars at a random specific location
 
 type posv3 = {
     pos1: Vector3,
-    pos2: Vector3
+    pos2: Vector3?
 }
 type posnumber = {
     pos1: number,
@@ -63,7 +63,7 @@ function StarGenerator.Generate(count: number, posdef: posv3 | posnumber, acolor
     end
     
     warn("[StarGenerator]: Now parenting folder, expect lag.")
-    f.Parent = workspace
+    if not folder then f.Parent = workspace end
 
     print("[StarGenerator]: Finished generating "..count.." stars, took "..os.clock() - t.." seconds.")
 end
