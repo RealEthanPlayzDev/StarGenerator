@@ -1,0 +1,6 @@
+{
+  "name": "StarGenerator",
+  "tree": {
+    "$path": "src/StarGenerator.lua"
+  }
+}
